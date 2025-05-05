@@ -36,7 +36,7 @@ Version      : 1.0
 :root {
     --main-color: light-dark(#444, #e2e2e2);
     --heading-color: light-dark(#000, #fff);
-    --primary-color: #1FB356;
+    --primary-color: #F9812E;
     --lighter-color: light-dark(#444, #e2e2e2);
     ;
     --subtitle-color: light-dark(#444, #e2e2e2);
@@ -1307,7 +1307,7 @@ html {
 }
 
 .about-image-part img {
-    border: 2px dashed #448C74;
+    border: 4px dashed light-dark(#1D1D1D, #F9812E);
     padding: 10px;
     border-radius: 50%;
     margin-bottom: 30px;
@@ -2535,14 +2535,14 @@ body.loaded {
     top: 0;
     width: 100vw;
     height: 110vh;
-    fill: light-dark(#000, #e8e8e8);
+    fill: light-dark(#000, #fff);
 }
 
 .preloader .preloader-heading .load-text {
     font-size: 20px;
     font-weight: 200;
     letter-spacing: 15px;
-    color: light-dark(#e8e8e8, #000);
+    color: light-dark(#fff, #000);
     text-transform: uppercase;
     z-index: 20;
 }
@@ -3248,7 +3248,7 @@ ul.blog_pagination li a:hover {
     display: block;
     width: 0.25vmin;
     height: 3vmin;
-    background: #1FB356;
+    background: #F9812E;
     content: "";
     transition: all 0.3s;
 }
@@ -3426,7 +3426,7 @@ ul.blog_pagination li a:hover {
         margin: 0;
         inset: unset;
         background: linear-gradient(var(--bg), var(--bg)) padding-box,
-            linear-gradient(hsl(0 0% 90% / 0.5), hsl(0 0% 10% / 0.25)) border-box;
+            linear-gradient(hsl(0 0% 90% / 0.5), hsl(0 0% 10% / 0.25)) border-box ;
         border: 1px solid transparent;
     }
 
@@ -4114,7 +4114,7 @@ ul.blog_pagination li a:hover {
 :root {
     --black: #404040;
     --white: #fff;
-    --gray: rgba(64, 64, 64, 0.15);
+    --gray: light-dark(rgba(64, 64, 64, 0.15), #444);
     --font-courgett: "Courgette", cursive;
     --font-open-sans: "Open Sans", sans-serif;
     --font-light: 300;
@@ -4251,7 +4251,7 @@ ul.blog_pagination li a:hover {
 }
 
 .c-article__img {
-    border-radius: 0.125rem;
+    border-radius: 0.512rem;
     display: block;
     height: 100%;
     filter: grayscale(1);
@@ -4272,12 +4272,12 @@ ul.blog_pagination li a:hover {
 
 .c-magic-area--menu {
     background-color: var(--gray);
-    border-radius: 0.125rem;
+    border-radius: 0.512rem;
 }
 
 .c-magic-area--content {
     background-color: var(--gray);
-    border-radius: 0.125rem;
+    border-radius: 0.512rem;
 }
 
 .c-magic-area--content::before {
@@ -4288,7 +4288,7 @@ ul.blog_pagination li a:hover {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 0.375rem;
+    width: 0.512rem;
 }
 
 .c-author {
@@ -4515,7 +4515,7 @@ ul.blog_pagination li a:hover {
     /* :root:has(#handle:checked)  */
     .grab-handle {
         outline: 4px dashed canvasText !important;
-        background: hsla(140, 76%, 52%, 0.2);
+        background: hsla(29, 77%, 59%, 0.247);
     }
 
     .arrow {
