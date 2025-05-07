@@ -3933,7 +3933,7 @@ ul.blog_pagination li a:hover {
 
 .snake path {
     fill: none;
-    stroke: black;
+    stroke: light-dark(black, #fff);
     stroke-dasharray: 29 100;
     stroke-width: 1.5px;
 }
@@ -3980,6 +3980,10 @@ ul.blog_pagination li a:hover {
 
 .icon-snake {
     width: 50px;
+}
+
+.icon-snake path {
+    stroke: light-dark(black, #fff);
 }
 
 
@@ -4207,7 +4211,9 @@ ul.blog_pagination li a:hover {
     margin: 0 0.175rem;
     padding: 0.425rem;
     text-decoration: none;
-    text-transform: uppercase;
+    text-transform: uppercase;/* 
+    position: inherit;
+    z-index: 98; */
 }
 
 .c-main-heading {
@@ -4271,8 +4277,14 @@ ul.blog_pagination li a:hover {
 }
 
 .c-magic-area--menu {
+    position: absolute;
+    z-index: 99;
     background-color: var(--gray);
     border-radius: 0.512rem;
+}
+
+.is-magic-active {
+    color: #F9812E !important;
 }
 
 .c-magic-area--content {
