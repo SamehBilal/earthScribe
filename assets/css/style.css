@@ -449,6 +449,11 @@ html {
     transition: .3s
 }
 
+.menu-btns {
+    display: flex;
+    gap: 1rem;
+}
+
 .menu-btns a.theme-btn {
     background: transparent;
     border: 1px solid light-dark(#000, #fff);
@@ -4469,7 +4474,7 @@ ul.blog_pagination li a:hover {
         --cap: color-mix(in lch, canvas, canvasText);
         --filament: light-dark(orange, color-mix(in lch, canvas, canvasText 25%));
         --bulb: transparent;
-        --width-form: 48px;
+        --width-form: 24px;
         --flicker: linear(0 0%,
                 0.1864 6.17%,
                 0.0001 14.41%,
@@ -4490,11 +4495,10 @@ ul.blog_pagination li a:hover {
     }
 
     .form {
-        position: fixed;
+        position: relative;
         width: var(--width-form);
         aspect-ratio: 1;
-        top: 1rem;
-        right: 1rem;
+        top: -1.5rem;
         z-index: 9999999;
     }
 
@@ -4514,11 +4518,11 @@ ul.blog_pagination li a:hover {
     }
 
     .grab-handle {
-        width: 48px;
+        width: 24px;
         aspect-ratio: 1;
         border-radius: 50%;
         position: absolute;
-        top: calc((48px * (0.35 / 2)) + ((48px * 0.65) * (125 / 48)));
+        top: calc((24px * (0.35 / 2)) + ((24px * 0.65) * (125 / 48)));
         left: 50%;
         translate: -50% -50%;
         z-index: 999999;
@@ -4526,14 +4530,14 @@ ul.blog_pagination li a:hover {
 
     /* :root:has(#handle:checked)  */
     .grab-handle {
-        outline: 4px dashed canvasText !important;
+        outline: 2px dashed canvasText !important;
         background: hsla(29, 77%, 59%, 0.247);
     }
 
     .arrow {
         width: 150%;
         position: absolute;
-        right: 150%;
+        right: 80%;
         top: 250%;
     }
 
