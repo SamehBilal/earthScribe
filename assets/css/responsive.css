@@ -1182,8 +1182,8 @@ Version      : 1.0
 
 @media only screen and (max-width: 575px) {
     .progress-wrap {
-        right: 10px;
-        bottom: 80px; /* Move it above the bottom nav */
+        right: 19px;
+        bottom: 70px; /* Move it above the bottom nav */
     }
 }
 
