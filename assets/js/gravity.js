@@ -32,11 +32,11 @@ const loadSVG = async (svg) => {
         const img = new Image();
         img.onload = () => {
             URL.revokeObjectURL(url); // Clean up after load
-            config[title] = title.toLowerCase().indexOf('bear') !== -1;
+            config[title] = title.toLowerCase().indexOf('buy') !== -1;
             const vertices = Matter.Svg.pathToVertices(path);
-            if (title === 'Bear' && !icons[title])
+            if (title === 'BuyMeCoffee' && !icons[title])
                 icons[title] = [];
-            if (title === 'Bear') {
+            if (title === 'BuyMeCoffee') {
                 icons[title].push({
                     img,
                     svg,
@@ -60,15 +60,15 @@ function loadSVGs(svgElements) {
     // Return a Promise that resolves when all SVG elements are loaded
     return Promise.allSettled(svgElements.map((svg) => new Promise((resolve, reject) => {
         const title = svg.querySelector('title').innerHTML;
-        if (title === 'Bear') {
-            // Load up a load of bears to use
+        if (title === 'BuyMeCoffee') {
+            // Load up a load of BuyMeCoffees to use
             for (let i = 0; i < 20; i++) {
-                const bear = svg.cloneNode(true);
-                const cap = bear.querySelector('.strap');
+                const BuyMeCoffee = svg.cloneNode(true);
+                const cap = BuyMeCoffee.querySelector('.strap');
                 cap.setAttribute('fill', `hsl(${gsap.utils.random(0, 359, 1)} 100% ${gsap.utils.random(50, 80, 1)}%)`);
-                const body = bear.querySelector('.body');
+                const body = BuyMeCoffee.querySelector('.body');
                 body.setAttribute('fill', `hsl(32 ${gsap.utils.random(20, 80, 1)}% ${gsap.utils.random(16, 65, 1)}%)`);
-                resolve(loadSVG(bear));
+                resolve(loadSVG(BuyMeCoffee));
             }
         }
         else {
@@ -134,8 +134,8 @@ const createBlocks = () => {
         const blockSize = 24;
         const allowed = Object.keys(icons).filter((i) => config[i]);
         const chosen = allowed[gsap.utils.random(0, allowed.length - 1, 1)];
-        const icon = chosen === 'Bear'
-            ? icons['Bear'][gsap.utils.random(0, icons['Bear'].length - 1, 1)]
+        const icon = chosen === 'BuyMeCoffee'
+            ? icons['BuyMeCoffee'][gsap.utils.random(0, icons['BuyMeCoffee'].length - 1, 1)]
             : icons[chosen];
         const vertices = icon.vertices;
         // console.info({ path, vertices })

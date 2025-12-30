@@ -3812,12 +3812,12 @@ html[data-theme="light"] .themed-logo-arabia img {
 }
 
 .themed-logo-nvidia-studio img {
-  content: url("/assets/images/client-logos/nvidia-studio-light.png");
+  content: url("/assets/images/client-logos/nvidia-studio-light.webp");
 }
 
 /* light mode */
 html[data-theme="light"] .themed-logo-nvidia-studio img {
-  content: url("/assets/images/client-logos/nvidia-studio-dark.png");
+  content: url("/assets/images/client-logos/nvidia-studio-dark.webp");
 }
 
 .themed-logo-moonton img {
