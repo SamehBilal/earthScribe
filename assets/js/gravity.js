@@ -97,18 +97,18 @@ const wordBodies = [];
 const blockBodies = [];
 // Kick off the render...
 let frame = 0;
-const ctrl = new Pane({
+/* const ctrl = new Pane({
     title: 'Config',
     expanded: false,
-});
+}); */
 const update = () => {
     document.documentElement.dataset.debug = config.debug;
     document.documentElement.dataset.theme = config.theme;
     engine.gravity.x = config.x;
     engine.gravity.y = config.y;
     engine.gravity.scale = config.scale;
-    setUpper.min = config.lower;
-    setLower.max = config.upper;
+    /* setUpper.min = config.lower; */
+    /* setLower.max = config.upper; */
 };
 const sync = (event) => {
     if (!event.last)
@@ -121,7 +121,7 @@ const sync = (event) => {
 // ctrl.addBinding(config, 'debug', {
 //   label: 'Debug',
 // })
-ctrl.addBinding(config, 'theme', {
+/* ctrl.addBinding(config, 'theme', {
     label: 'Theme',
     options: {
         System: 'system',
@@ -129,7 +129,7 @@ ctrl.addBinding(config, 'theme', {
         Dark: 'dark',
     },
 });
-ctrl.on('change', sync);
+ctrl.on('change', sync); */
 const createBlocks = () => {
     blockBodies.length = 0;
     for (let i = 0; i < config.blockCount; i++) {
@@ -299,7 +299,7 @@ const render = () => {
 document.documentElement.dataset.active = true;
 gsap.ticker.add(render);
 gsap.ticker.fps(60);
-const blockFolder = ctrl.addFolder({ title: 'Blocks', expanded: false });
+/* const blockFolder = ctrl.addFolder({ title: 'Blocks', expanded: false });
 blockFolder
     .addBinding(config, 'blockCount', {
     min: 1,
@@ -307,8 +307,8 @@ blockFolder
     step: 1,
     label: 'Count',
 })
-    .on('change', newBlocksPlease);
-const setLower = blockFolder
+    .on('change', newBlocksPlease); */
+/* const setLower = blockFolder
     .addBinding(config, 'lower', {
     min: 0.5,
     max: config.upper,
@@ -331,8 +331,8 @@ blockFolder
     step: 1,
     label: 'Stagger (frame)',
 })
-    .on('change', newBlocksPlease);
-const iconsFolder = ctrl.addFolder({ title: 'Icons', expanded: false });
+    .on('change', newBlocksPlease); */
+/* const iconsFolder = ctrl.addFolder({ title: 'Icons', expanded: false });
 for (const icon of Object.keys(icons)) {
     iconsFolder.addBinding(config, icon, {
         label: icon,
@@ -356,8 +356,8 @@ bounce
     .on('change', (event) => {
     bounciness.disabled = config.random;
     newBlocksPlease(event);
-});
-const gravity = ctrl.addFolder({ title: 'Gravity', expanded: false });
+}); */
+/* const gravity = ctrl.addFolder({ title: 'Gravity', expanded: false });
 const x = gravity.addBinding(config, 'x', {
     label: 'x',
     min: -1,
@@ -437,7 +437,7 @@ ctrl
     .addButton({
     title: 'Drop',
 })
-    .on('click', resetBlocks);
+    .on('click', resetBlocks); */
 const adapt = () => {
     // Here you need to update all the things...
     canvas.width = canvas.offsetWidth * DPR;
@@ -454,8 +454,4 @@ const setInteractive = (interactive) => {
 };
 window.addEventListener('dblclick', () => {
     setInteractive(true);
-});
-const unlock = document.querySelector('.unlock');
-unlock.addEventListener('click', () => {
-    setInteractive(false);
 });

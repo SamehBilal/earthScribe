@@ -84,7 +84,7 @@ const getAreaDetails = (area) => {
   const position = area.getBoundingClientRect();
   const top = position.top + window.scrollY;
   const left = position.left;
-  console.log(position.top);
+  //console.log(position.top);
   return {
     left,
     height,

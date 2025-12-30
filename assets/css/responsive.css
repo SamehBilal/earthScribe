@@ -17,16 +17,19 @@ Version      : 1.0
     .section-title p {
         padding: 0px 100px;
     }
+
     .about-image-part h2 {
-    font-size: 30px;
-}
-.about-social ul li {
-    display: inline-block;
-    margin: 15px 2px 15px 2px;
-}
-.call-to-action-part {
-    padding: 60px 60px;
-}
+        font-size: 30px;
+    }
+
+    .about-social ul li {
+        display: inline-block;
+        margin: 15px 2px 15px 2px;
+    }
+
+    .call-to-action-part {
+        padding: 60px 60px;
+    }
 }
 
 
@@ -58,9 +61,11 @@ Version      : 1.0
     .resume-area {
         padding-top: 50px;
     }
-.single-resume {
-margin-bottom:30px;
-}
+
+    .single-resume {
+        margin-bottom: 30px;
+    }
+
     .skill-area {
         padding-top: 50px;
     }
@@ -165,7 +170,10 @@ margin-bottom:30px;
     .extra-copyright p {
         text-align: center;
     }
-.blog-post-box .blog-post-img {margin-bottom: 30px;}
+
+    .blog-post-box .blog-post-img {
+        margin-bottom: 30px;
+    }
 }
 
 
@@ -317,7 +325,7 @@ margin-bottom:30px;
     .hero-counter-area .counter-title {
         font-size: 14px;
     }
-	
+
 
 }
 
@@ -473,7 +481,11 @@ margin-bottom:30px;
     .list-style-one.two-column li {
         width: 100%;
     }
-	.map_title, .close_btn {font-size: 40px;}
+
+    .map_title,
+    .close_btn {
+        font-size: 40px;
+    }
 }
 
 
@@ -832,6 +844,90 @@ margin-bottom:30px;
 @media only screen and (max-width: 575px) {
     .main-menu .mobile-logo {
         max-width: 150px;
+    }
+
+    .main-header .logo {
+        font-size: 4vmin;
+        padding: 2px 4px;
+    }
+
+    .logo-letter {
+        width: 6vmin;
+        height: 6vmin;
+        border-top: 0.50vmin solid light-dark(#000, #fff);
+        line-height: 6vmin;
+    }
+
+    .logo-letter:before {
+        position: absolute;
+        top: -0.50vmin;
+        right: -0.50vmin;
+        display: block;
+        width: 0.50vmin;
+        height: 6vmin;
+    }
+
+    .logo-letter .is-active:before {
+        top: -0.50vmin;
+        height: 0.50vmin;
+    }
+
+    .logo-letter .is-active:last-child:before {
+        height: 0.50vmin;
+        top: -0.50vmin;
+    }
+
+    .logo-letter:nth-child(2) {
+        transform: translateY(6vmin);
+    }
+
+    .logo-letter:nth-child(2).is-active {
+        transform: translateY(0);
+    }
+
+    .logo-letter:nth-child(3) {
+        transform: translateY(12vmin);
+    }
+
+    .logo-letter:nth-child(3).is-active {
+        transform: translateY(0);
+    }
+
+    .logo-letter:nth-child(4) {
+        transform: translateY(18vmin);
+    }
+
+    .logo-letter:nth-child(4).is-active {
+        transform: translateY(0);
+    }
+
+    .logo-letter:nth-child(5) {
+        transform: translateY(24vmin);
+    }
+
+    .logo-letter:nth-child(5).is-active {
+        transform: translateY(0);
+    }
+
+    #bmc-wbtn{
+        width: 45px !important;
+        height: 45px !important;
+    }
+
+    #bmc-wbtn img {
+        width: 25px !important;
+        height: 25px !important;
+    }
+
+    .nav {
+        box-shadow: 0 4px 8px 0 hsl(0 0% 0% / 0.2);
+        position: fixed;
+        bottom: 1rem;
+        left: 50%;
+        translate: -50% 0;
+        padding: 8px !important;
+        border-radius: 100px;
+        border: 1px solid light-dark(#000, #e2e2e2) !important;
     }
 }
 
