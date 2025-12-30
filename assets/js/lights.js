@@ -11,7 +11,7 @@ let startX;
 let startY;
 
 const AUDIO = {
-  CLICK: new Audio('https://assets.codepen.io/605876/click.mp3') };
+  CLICK: new Audio('/assets/audio/click.mp3') };
 
 
 /* const heading = document.querySelector('h1'); */

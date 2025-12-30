@@ -1,7 +1,6 @@
 import { Pane } from 'https://cdn.skypack.dev/tweakpane@4.0.4';
 import gsap from 'https://cdn.skypack.dev/gsap@3.12.0';
 import Matter from 'https://cdn.skypack.dev/matter-js';
-import Splitting from 'https://cdn.skypack.dev/splitting';
 const config = {
     debug: false,
     theme: 'system',
@@ -80,7 +79,6 @@ function loadSVGs(svgElements) {
 // Example usage:
 const svgElements = Array.from(document.querySelectorAll('.icons svg'));
 await loadSVGs(svgElements);
-Splitting();
 const DPR = window.devicePixelRatio;
 const thickness = window.innerWidth;
 const engine = Matter.Engine.create({

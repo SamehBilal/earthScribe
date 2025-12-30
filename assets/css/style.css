@@ -232,7 +232,7 @@ select::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder,
 .nice-select::-webkit-input-placeholder,
 .form-control::-webkit-input-placeholder {
-    color: var(--heading-color);
+    color: light-dark(#000, #1D1D1D);
     opacity: .4;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
 }
@@ -242,7 +242,7 @@ select:-ms-input-placeholder,
 textarea:-ms-input-placeholder,
 .nice-select:-ms-input-placeholder,
 .form-control:-ms-input-placeholder {
-    color: var(--heading-color);
+    color: light-dark(#000, #1D1D1D);
     opacity: .4;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
 }
@@ -252,7 +252,7 @@ select::-ms-input-placeholder,
 textarea::-ms-input-placeholder,
 .nice-select::-ms-input-placeholder,
 .form-control::-ms-input-placeholder {
-    color: var(--heading-color);
+    color: light-dark(#000, #1D1D1D);
     opacity: .4;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
 }
@@ -262,7 +262,7 @@ select::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder,
 .nice-select::-webkit-input-placeholder,
 .form-control::-webkit-input-placeholder {
-    color: var(--heading-color);
+    color: light-dark(#000, #1D1D1D);
     opacity: .4;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
 }
@@ -272,7 +272,7 @@ select::-moz-placeholder,
 textarea::-moz-placeholder,
 .nice-select::-moz-placeholder,
 .form-control::-moz-placeholder {
-    color: var(--heading-color);
+    color: light-dark(#000, #1D1D1D);
     opacity: .4;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
 }
@@ -282,7 +282,7 @@ select:-ms-input-placeholder,
 textarea:-ms-input-placeholder,
 .nice-select:-ms-input-placeholder,
 .form-control:-ms-input-placeholder {
-    color: var(--heading-color);
+    color: light-dark(#000, #1D1D1D);
     opacity: .4;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
 }
@@ -292,7 +292,7 @@ select::placeholder,
 textarea::placeholder,
 .nice-select::placeholder,
 .form-control::placeholder {
-    color: var(--heading-color);
+    color: light-dark(#000, #1D1D1D);
     opacity: .4;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
 }
@@ -2270,9 +2270,9 @@ ul.extra-skills li i {
 
 .map_title,
 .close_btn {
-    background: #fff;
+    background: light-dark(#fff, #1D1D1D);
     display: block;
-    color: #000;
+    color: light-dark(#000, #fff);
     padding: 40px 10px;
     text-align: center;
     text-transform: uppercase;
@@ -2283,7 +2283,7 @@ ul.extra-skills li i {
     -o-transition: 0.3s;
     font-weight: 600;
     color: transparent;
-    -webkit-text-stroke: 1px #000;
+    -webkit-text-stroke: 1px light-dark(#000, #fff);
 }
 
 .map_title:hover,
@@ -2469,7 +2469,7 @@ ul.extra-skills li i {
     border: 1px solid rgba(0, 0, 0, 0.05);
     border-radius: 20px;
     box-shadow: rgba(255, 255, 255, 0.025) 0px 0.362176px 0.651917px -1px inset, rgba(255, 255, 255, 0.036) 0px 3px 5.4px -2px inset;
-    background-color: #fff;
+    background-color: light-dark(#fff, #1D1D1D);
 }
 
 .call-to-action-area {
@@ -2487,7 +2487,7 @@ ul.extra-skills li i {
 }
 
 .call-to-action-part h2 span {
-    -webkit-text-stroke: 1px #000;
+    -webkit-text-stroke: 1px light-dark(#000, #fff);
     color: transparent;
 }
 
@@ -2628,7 +2628,7 @@ body.loaded {
     border-radius: 50px;
     z-index: 100;
     opacity: 0;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    /* -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; */
     visibility: hidden;
     -webkit-transform: translateY(20px);
     transform: translateY(20px);
@@ -2639,7 +2639,7 @@ body.loaded {
 
 .progress-wrap.active-progress {
     opacity: 1;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    /* -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; */
     visibility: visible;
     -webkit-transform: translateY(0);
     transform: translateY(0);
@@ -2666,8 +2666,8 @@ body.loaded {
 }
 
 .progress-wrap {
-    right: 10px;
-    bottom: 20px;
+    right: 28px;
+    bottom: 90px;
 }
 
 
@@ -3615,7 +3615,7 @@ ul.blog_pagination li a:hover {
     }
 
     .heading {
-        padding-top: 0.75rem !important;
+        padding: 0.75rem 0.75rem 0 0.75rem !important;
         display: flex;
         flex-direction: column;
         gap: 4px;
@@ -3630,7 +3630,7 @@ ul.blog_pagination li a:hover {
         color: inherit;
         background: color-mix(in hsl, canvas 85%, canvasText);
         color: var(--color);
-        padding: 2px !important;
+        padding: 4px !important;
         border-radius: 4px;
         margin-left: 0.75rem;
 
@@ -3791,6 +3791,51 @@ ul.blog_pagination li a:hover {
 .logo-dark,
 .logo-light {
     display: none;
+}
+
+.themed-logo-ubisoft img {
+  content: url("/assets/images/client-logos/ubisoft-dark.png");
+}
+
+/* light mode */
+html[data-theme="light"] .themed-logo-ubisoft img {
+  content: url("/assets/images/client-logos/ubisoft-light.png");
+}
+
+.themed-logo-arabia img {
+  content: url("/assets/images/client-logos/arabia-light.png");
+}
+
+/* light mode */
+html[data-theme="light"] .themed-logo-arabia img {
+  content: url("/assets/images/client-logos/arabia-dark.png");
+}
+
+.themed-logo-nvidia-studio img {
+  content: url("/assets/images/client-logos/nvidia-studio-light.png");
+}
+
+/* light mode */
+html[data-theme="light"] .themed-logo-nvidia-studio img {
+  content: url("/assets/images/client-logos/nvidia-studio-dark.png");
+}
+
+.themed-logo-moonton img {
+  content: url("/assets/images/client-logos/moonton-light.png");
+}
+
+/* light mode */
+html[data-theme="light"] .themed-logo-moonton img {
+  content: url("/assets/images/client-logos/moonton-dark.png");
+}
+
+.themed-logo-solid img {
+  content: url("/assets/images/skills/solid-light.png");
+}
+
+/* light mode */
+html[data-theme="light"] .themed-logo-solid img {
+  content: url("/assets/images/skills/solid-dark.png");
 }
 
 [data-theme="dark"] .logo-dark {

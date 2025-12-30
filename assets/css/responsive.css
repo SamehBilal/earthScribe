@@ -1180,6 +1180,13 @@ Version      : 1.0
     }
 }
 
+@media only screen and (max-width: 575px) {
+    .progress-wrap {
+        right: 10px;
+        bottom: 80px; /* Move it above the bottom nav */
+    }
+}
+
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
     .project-content {
         padding-left: 20px;

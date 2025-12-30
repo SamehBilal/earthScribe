@@ -31,7 +31,7 @@ pop.addEventListener('toggle', async event => {
 
 const themeToggler = document.querySelector('.theme-toggler');
 themeToggler.addEventListener('click', () => {
-  const options = [/* 'system',  */'light', 'dark'];
+  const options = ['system', 'light', 'dark'];
   const index = options.indexOf(config.theme);
   const newTheme = options.at(index + 1 > options.length - 1 ? 0 : index + 1);
   config.theme = newTheme;
