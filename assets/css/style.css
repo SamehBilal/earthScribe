@@ -3794,48 +3794,48 @@ ul.blog_pagination li a:hover {
 }
 
 .themed-logo-ubisoft img {
-  content: url("/assets/images/client-logos/ubisoft-dark.png");
+  content: url("../images/client-logos/ubisoft-dark.png");
 }
 
 /* light mode */
 html[data-theme="light"] .themed-logo-ubisoft img {
-  content: url("/assets/images/client-logos/ubisoft-light.png");
+  content: url("../images/client-logos/ubisoft-light.png");
 }
 
 .themed-logo-arabia img {
-  content: url("/assets/images/client-logos/arabia-light.png");
+  content: url("../images/client-logos/arabia-light.png");
 }
 
 /* light mode */
 html[data-theme="light"] .themed-logo-arabia img {
-  content: url("/assets/images/client-logos/arabia-dark.png");
+  content: url("../images/client-logos/arabia-dark.png");
 }
 
 .themed-logo-nvidia-studio img {
-  content: url("/assets/images/client-logos/nvidia-studio-light.webp");
+  content: url("../images/client-logos/nvidia-studio-light.webp");
 }
 
 /* light mode */
 html[data-theme="light"] .themed-logo-nvidia-studio img {
-  content: url("/assets/images/client-logos/nvidia-studio-dark.webp");
+  content: url("../images/client-logos/nvidia-studio-dark.webp");
 }
 
 .themed-logo-moonton img {
-  content: url("/assets/images/client-logos/moonton-light.png");
+  content: url("../images/client-logos/moonton-light.png");
 }
 
 /* light mode */
 html[data-theme="light"] .themed-logo-moonton img {
-  content: url("/assets/images/client-logos/moonton-dark.png");
+  content: url("../images/client-logos/moonton-dark.png");
 }
 
 .themed-logo-solid img {
-  content: url("/assets/images/skills/solid-light.png");
+  content: url("../images/skills/solid-light.png");
 }
 
 /* light mode */
 html[data-theme="light"] .themed-logo-solid img {
-  content: url("/assets/images/skills/solid-dark.png");
+  content: url("../images/skills/solid-dark.png");
 }
 
 [data-theme="dark"] .logo-dark {
