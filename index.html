@@ -1715,7 +1715,11 @@
                                     [o,o]
                                     /)__)
                                     -"--"-
-                                </span> All Rights Reserved.
+                                </span>
+                                 <span class="sr-only">
+    Decorative owl animation indicating site activity
+  </span>
+   All Rights Reserved.
                             </p>
                         </div>
                     </div>
@@ -1985,6 +1989,16 @@
                 setTimeout(() => (scrolling = false), 600);
             });
 
+            let lastScroll = 0;
+
+            window.addEventListener("scroll", () => {
+                const now = Date.now();
+                if (now - lastScroll < 1200) return;
+                lastScroll = now;
+
+                play(OWL.scroll, 200, true);
+            });
+
             // Idle detection (extra sleepy)
             function resetIdleTimer() {
                 clearTimeout(idleTimer);
@@ -2003,7 +2017,12 @@
             /* Back / forward navigation */
             window.addEventListener("hashchange", handleRouteChange);
 
-            startIdle();
+            document.addEventListener("visibilitychange", () => {
+                if (document.hidden) clearInterval(interval);
+                else startIdle();
+            });
+
+            //startIdle();
         })
     </script>
 
