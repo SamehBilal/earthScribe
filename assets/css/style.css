@@ -4181,7 +4181,7 @@ html[data-theme="light"] .themed-logo-solid img {
 
 .c-article__link {
     align-items: center;
-    color: var(--black);
+    color: light-dark(#404040, #bab4b4);
     display: flex;
     justify-content: space-between;
     margin: 1.875rem 0;
@@ -4247,7 +4247,7 @@ html[data-theme="light"] .themed-logo-solid img {
 }
 
 .c-magic-area--content::before {
-    background-color: var(--black);
+    background-color: light-dark(var(--black), #F9812E);
     content: "";
     height: 70%;
     left: -0.1875rem;
@@ -4626,7 +4626,7 @@ html[data-theme="light"] .themed-logo-solid img {
     }
 
     h1,
-    h2 {
+    h6 {
         --font-level: 8;
         text-wrap: balance;
         margin: 0;
@@ -4654,14 +4654,14 @@ html[data-theme="light"] .themed-logo-solid img {
         initial-value: 0;
     }
 
-    h2 {
+    h6 {
         animation: show both linear;
         animation-timeline: view();
         animation-range: cover;
         clip-path: inset(0 0 0 0);
     }
 
-    h2>span:first-of-type {
+    h6>span:first-of-type {
         --font-level: 7.41;
         opacity: calc(1 - (var(--flip) * 0.8));
         transition: opacity 0.5s linear(0 0%,
@@ -4685,7 +4685,7 @@ html[data-theme="light"] .themed-logo-solid img {
                 1 100%);
     }
 
-    h2 .char {
+    h6 .char {
         translate: 0 calc((1 - var(--flip)) * 1.2lh);
         transition: translate 0.5s calc(sin(var(--char-index) / var(--char-total) * 45deg) * 0.5s) linear(0 0%,
                 0.0036 9.62%,
@@ -4925,4 +4925,31 @@ h6 .char {
     to {
         --flip: 1;
     }
+}
+
+.ascii.owl {
+    display: inline-block;
+    font-family: monospace;
+    font-size: 0.85em;
+    line-height: 1.1;
+    white-space: pre;
+    vertical-align: middle;
+    margin: 0 6px;
+    cursor: default;
+    opacity: 0.85;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    color: light-dark(#000000, #F9812E);
+      will-change: transform, opacity;
+
+}
+
+.ascii.owl:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+/* subtle hover life */
+.ascii.owl.is-awake {
+    opacity: 1;
+    transform: translateY(-1px);
 }

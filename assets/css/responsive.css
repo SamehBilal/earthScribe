@@ -929,6 +929,10 @@ Version      : 1.0
         border-radius: 100px;
         border: 1px solid light-dark(#000, #e2e2e2) !important;
     }
+
+    .fixed-header .main-menu .navbar-header {
+        height: 1em;
+    }
 }
 
 @media only screen and (max-width: 991px) {
@@ -1064,7 +1068,7 @@ Version      : 1.0
         display: flex;
         -webkit-box-align: center;
         -ms-flex-align: center;
-        align-items: center;
+        align-items: baseline;
         -webkit-box-pack: start;
         -ms-flex-pack: start;
         justify-content: start;
