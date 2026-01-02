@@ -152,7 +152,7 @@ const moveMagicArea = (links, magicArea, isTweenBack) => {
 const setMagic = (links, magicArea) => {
   // check if .is-magic-active || aria-current="page"
   const magicActiveElement = getMagicActiveElement(links);
-
+  
   if (magicActiveElement.length) {
     setTweenArea(magicActiveElement[0], magicArea);
   } else {
@@ -186,6 +186,15 @@ const initMagic = ({ isResize } = { isResize: false }) => {
 
 initMagic();
 
+const articleLinks = document.querySelectorAll(".c-article__link");
+
+articleLinks.forEach(link => {
+  link.addEventListener("mouseenter", () => {
+    articleLinks.forEach(l => l.classList.remove("is-magic-active"));
+    link.classList.add("is-magic-active");
+  });
+});
+
 window.addEventListener(
   "resize",
   _.throttle(function () {
@@ -197,4 +206,8 @@ VanillaTilt.init(document.querySelector(".c-fe30__inner"), {
   max: 20,
   perspective: 1000,
   speed: 300
+});
+
+articleLinks.forEach(link => {
+  link.addEventListener("focus", () => link.dispatchEvent(new Event("mouseenter")));
 });

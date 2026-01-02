@@ -1434,3 +1434,35 @@ Version      : 1.0
         padding: 0 15px;
     }
 }
+
+@media only screen and (max-width: 991px) {
+    .footer-poistion {
+        position: relative;
+        bottom: 2em;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .footer-poistion {
+        position: relative;
+        bottom: 1.2em;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .ea-logo {
+        height: 75px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .ea-logo {
+        height: 68px;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .ea-logo {
+        height: 35px;
+    }
+}
